@@ -8,12 +8,12 @@ function createWindow () {
   const display = screen.getPrimaryDisplay()
 
   const mainWindow = new BrowserWindow({
-    width: 1600,
+    width: 1200,
     height: 800,
     x: 10,
     y: display.workAreaSize.height - 800,
     center: false,
-    alwaysOnTop: true,
+    // alwaysOnTop: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
@@ -23,7 +23,7 @@ function createWindow () {
   mainWindow.loadFile('index.html')
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
